@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<!--[if IE 7 ]><html lang="en" class="no-js iex lt-ie9 ie7"><![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js iex lt-ie9 ie8"><![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js iex ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="no-js"><!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,18 +19,26 @@
         <link rel="stylesheet" href="css/style.css">
         <!-- Import modernizr here to set the browser capabilities -->
         <script src="js/lib/modernizr-dev.min.js"></script>
+        <!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	    <![endif]-->
     </head>
-    <body>
+    <body class="logged-in">
         <!--[if lt IE 8]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate. Modded.</p>
+		
+		<!-- Begin #app-container -->
+		<div id="app-container">
+		
+        	<p>Ready to go!</p>
+        	
+		</div>
+		<!-- End #app-container -->
 
         <!-- Begin JS calls -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/lib/jquery-1.11.0.min.js"><\/script>')</script>
+        <!-- script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/lib/jquery-1.11.0.min.js"><\/script>')</script -->
         <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
