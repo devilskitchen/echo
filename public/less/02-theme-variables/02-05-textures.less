@@ -1,0 +1,15 @@
+/*==== COMMON TEXTURES ====*/
+
+#texture {
+	// Change the text colour depending on the background colour
+	.flat-col(@bg-col:@color1;) {
+		background-color:@bg-col;
+		color:contrast(@bg-col,@darker-grey,@white);
+	}
+	// Change the text colour depending on the background colour
+	// Using the .gradient mixin in 01-05-toolbox.less
+	.grad-mono(@grad-col;@grad-variance:10%;) {
+		.gradient(@grad-col,lighten(@grad-col,@grad-variance),darken(@grad-col,@grad-variance));
+		color:contrast(@grad-col,@darker-grey,@white);
+	}
+}

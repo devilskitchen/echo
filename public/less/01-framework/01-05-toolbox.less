@@ -1,0 +1,71 @@
+/*====
+	The LESS Toolbox contains mixins, textures and other useful elements.
+	I have reduced this considerably, because Autoprefixer in CK2 handles much of the heavy lifting.
+	Toolbox is not for styling mixins or variables: use the relevant variables files for those.
+====*/
+
+// Apply a natural box layout model to some elements:browser default is content-box
+.box-sizing(@box-model:border-box;) {
+	-moz-box-sizing:@box-model;
+	-webkit-box-sizing:@box-model;
+	box-sizing:@box-model;
+}
+
+// Reset lists
+.list-reset () {
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+
+// CSS3 Filters: Autoprefixer does not pick these up properly, as of April 2014
+#filter {
+	// Drop-shadow includes alpha shapes
+	.drop-shadow (@x:0;@y:1px;@spread:1px;@r:0;@g:0;@b:0;@alpha:0.8;) {
+		-webkit-filter: drop-shadow(@x @y @spread rgba(@r,@g,@b,@alpha));
+		-moz-filter: drop-shadow(@x @y @spread rgba(@r,@g,@b,@alpha));
+		-o-filter: drop-shadow(@x @y @spread rgba(@r,@g,@b,@alpha));
+		-ms-filter: drop-shadow(@x @y @spread rgba(@r,@g,@b,@alpha));
+		filter: drop-shadow(@x @y @spread rgba(@r,@g,@b,@alpha));
+	}
+	// Essentially, a Gaussian blur: SVG fallback can be implemented, c.f. http://css-tricks.com/frosting-glass-css-filters/ 
+	.blur (@blur-px:4px) {
+		-webkit-filter: blur(@blur-px);
+		-moz-filter: drop-shadow(@blur-px);
+		-o-filter: drop-shadow(@blur-px);
+		-ms-filter: drop-shadow(@blur-px);
+		filter: drop-shadow(@blur-px);
+	}
+}
+
+// Gradient mixin (brought up to date: CJDM 27/08/2012)
+.gradient (@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
+	background-color: @color;
+	background-image: -moz-linear-gradient(top, @start 0%, @stop 100%); // FF3.6+
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @start), color-stop(100%, @stop)); // Chrome,Safari4+
+	background-image: -webkit-linear-gradient(top, @start 0%, @stop 100%); // Chrome10+,Safari5.1+
+	background-image: -o-linear-gradient(top, @start 0%, @stop 100%); // Opera 11.10+
+	background-image: linear-gradient(to bottom, @start 0%, @stop 100%); // W3C
+}
+	
+// Gradient left to right
+.gradient-left (@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
+	background-color: @color;
+	background-image: -moz-linear-gradient(left, @start 0%, @stop 100%); // FF3.6+
+	background-image: -webkit-gradient(linear, left, right, color-stop(0%, @start), color-stop(100%, @stop)); // Chrome,Safari4+
+	background-image: -webkit-linear-gradient(left, @start 0%, @stop 100%); // Chrome10+,Safari5.1+
+	background-image: -o-linear-gradient(left, @start 0%, @stop 100%); // Opera 11.10+
+	background-image: linear-gradient(to right, @start 0%, @stop 100%); // W3C
+}
+
+// Radial gradient mixin (brought up to date: CJDM 27/08/2012)
+.gradient-radial (@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
+	background-color: @color;
+	background-image: -moz-radial-gradient(center, ellipse cover, @start 0%, @stop 100%); // FF3.6+
+	background-image: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,@start), color-stop(100%,@stop)); // Chrome,Safari4+
+	background-image: -webkit-radial-gradient(center, ellipse cover, @start 0%,@stop 100%); // Chrome10+,Safari5.1+
+	background-image: -o-radial-gradient(center, ellipse cover, @start 0%,@stop 100%); // Opera 12+
+	background-image: radial-gradient(ellipse at center, @start 0%,@stop 100%); // W3C
+}
+
+// Flexbox mixin needed

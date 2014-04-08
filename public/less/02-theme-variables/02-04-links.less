@@ -1,0 +1,40 @@
+/*==== A:HREF BEHAVIOUR ====*/
+
+// Standard links
+#links {
+	.color (@link-col:@color1;) {
+		color:@link-col;
+		text-decoration:none;
+		&:visited {
+			color:darken(@link-col,8%);
+		}
+		&:hover,
+		&:focus {
+			color:lighten(@link-col,10%);
+			text-decoration:underline;
+		}
+		&:active {
+			color:lighten(@link-col,15%);
+			text-decoration:none;
+		}		
+	}
+}
+
+// Make containing links a block of some sort, so that it will stretch and contain
+.link-block(@display-mode:block;) {
+	display:@display-mode;
+}
+
+// Mark external links
+a[rel*="external"] {
+	text-decoration:none;
+	&:after {
+		content:"\f08e";
+		&:extend(.fonticon);
+		margin-left:@space-px;
+		color:@light-grey;
+		vertical-align:top;
+		font-size:90%;
+		text-decoration:none;
+	}
+}

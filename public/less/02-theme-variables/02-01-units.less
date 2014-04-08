@@ -1,0 +1,62 @@
+/*==== VIEWPORT FIXES: see http://getbootstrap.com/getting-started/#browsers for more ====*/
+
+@-webkit-viewport   { width: device-width; }
+@-moz-viewport      { width: device-width; }
+@-ms-viewport       { width: device-width; }
+@-o-viewport        { width: device-width; }
+@viewport           { width: device-width; }
+
+/*==== SPACING ELEMENTS ====*/
+@space-em:0.4em;
+@space-px:4px;
+
+// 1 vh/vw unit reflects 1/100th the width of the viewport.
+//To make an element the full width of the viewport, for example, you'd set it to width:100vw.
+// Ref: http://snook.ca/archives/html_and_css/vm-vh-units
+@vh-unit:4px;
+@vw-unit:4px;
+
+/*==== FONT UNITS ====*/
+@font-light:200;
+@font-normal:400;
+@font-bold:700;
+@font-black:900;
+
+// The golden ratio (especially for type)
+@golden-ratio:1.62;
+
+// Mobile and desktop visibility
+.visibility(@visible:mobile;) when (@visible = mobile) {
+	@media @desktop {
+		display:none;
+	}
+	@media @desktop-l {
+		display:none;
+	}
+	@media @desktop-xl {
+		display:none;
+	}
+}
+.visibility(@visible:mobile;) when (@visible = desktop) {
+	@media @mobile {
+		display:none;
+	}
+	@media @tablet {
+		display:none;
+	}
+}
+
+/*==== HIDE ELEMENTS USING POSITION (FOR TRANSITIONS) ====*/
+.hide-pos() {
+	position:absolute;
+	top:-99999px;
+	left:-99999px;
+	opacity:0;
+	.transition-3(opacity 0.25s ease, top 0s 0.5s linear, left 0s 0.5s linear);
+}
+
+.pad(@pad-v:@space-em;@pad-h:(@pad-v * 2)) {
+	padding:@pad-v @pad-h;
+}
+
+

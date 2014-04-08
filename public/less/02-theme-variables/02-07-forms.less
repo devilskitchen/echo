@@ -1,0 +1,71 @@
+/*==== FORM AND INPUT ELEMENTS ====*/
+
+// Variables
+
+// Placeholder text
+.placeholder(@color:@grey) {
+	&:-moz-placeholder { color: @color; } // Firefox 4-18
+	&::-moz-placeholder { color: @color; } // Firefox 19+
+	&:-ms-input-placeholder { color: @color; } // Internet Explorer 10+
+	&::-webkit-input-placeholder { color: @color; } // Safari and Chrome
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+  transition: opacity 0.5s 0.5s ease; 
+  opacity: 0;
+}
+
+// Assign Form inputs
+.placeholder();
+
+.text-inputs () {
+	.box-sizing();
+	width:100%;
+	&:hover,
+	&:focus {
+		background-color: @lightest-grey;
+		outline: none;
+	}
+	&:invalid {
+		background:lighten(@color10,10%);
+		position:relative;
+	}
+}
+
+// Forms
+form {
+	
+}
+
+// Fieldsets and legends
+fieldset {
+	legend {
+		
+	}
+}
+
+// Textarea and selects
+textarea,
+select {
+	.box-sizing();
+	width:100%;
+	
+}
+
+// Input 
+input {
+	&[type='text'],
+	&[type='search'],
+	&[type='password'],
+	&[type='tel'],
+	&[type='url'],
+	&[type='email'] {
+		.text-inputs();
+	}
+}
+
+// Inputs
+button,
+input[type="submit"] {
+
+}

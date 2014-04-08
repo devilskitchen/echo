@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+// Created by CJDM 08/04/2014, using the new framework
+
+/*-------- Set Up --------*/
+
+@library-path: "101-libraries/";
+	@library-img-path: "../img/lib/";
+// Call images
+@image-url: "../img/";
+// Example: background-image: url("@{image-url}bg.png");
+@ie-image-url: "../img/ie/";
+// Example: background-image: url("@{ie-image-url}bg.png");
+
+/*---- Standard definitions: others are in 04-structure/01-page ----*/
+* {
+	.box-sizing();
+}
+
+html {
+	padding:0;
+	margin:0;
+	height:100%;
+} 
+  
+body {
+	padding:0;
+	margin:0;
+	height:100%;
+	position:relative;
+}
+
+/*======== IMPORT CSS LIBRARIES ========*/
+
+	
+/*======== IMPORT STYLES ========*/
+	
+	/*==== 01-Framework ====*/
+	@import "01-framework/01-01-normalise";
+	@import "01-framework/01-02-first-shim";
+	// 01-03-last-shim goes last to ensure that the helper classes are not over-ridden
+	@import "01-framework/01-04-toolbox";
+	@import "01-framework/01-05-media-breakpoints";
+		
+	/*==== 02-Global-Variables ====*/
+	@import "02-global-variables/02-01-units";
+	@import "02-global-variables/02-02-colours";
+	@import "02-global-variables/02-03-images";
+	@import "02-global-variables/02-04-links";
+	@import "02-global-variables/02-05-textures";
+	@import "02-global-variables/02-06-fonts";
+	@import "02-global-variables/02-07-forms";
+	@import "02-global-variables/02-08-columns";
+	@import "02-global-variables/02-09-typography";
+	@import "02-global-variables/02-10-animations";
+	
+	/*==== 03-Structure ====*/
+	//@import "03-components/03-01-banner-palettes";
+	
+	/*==== 04-Components ====*/
+	//@import "04-structure/04-01-structure";
+	
+	/*==== 101-Libraries ====*/
+	//@import "101-libraries/select2";
+	
+	/*==== 11-media-queries ====*/
+	@import "01-framework/01-04-print";
+	// Last shim goes last to ensure that the helper classes are not over-written
+	@import "01-framework/01-03-last-shim";
+	
+/*======== END STYLES ========*/

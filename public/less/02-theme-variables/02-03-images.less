@@ -1,0 +1,38 @@
+/*==== COMMON IMAGES ====*/
+
+// Logo width
+@logo-height:100px;
+@logo-width:180px;
+@logo-width-mobile:140px;
+
+// Default image sizes
+@small-icon-size:18px;
+@standard-icon-size:24px;
+@large-icon-size:36px;
+@larger-icon-size:48px;
+
+// Image positioning mixin
+.bg-pos (@repeat:no-repeat,@pos-x:center,@pos-y:center) {
+	background-position: @pos-x @pos-y;
+	background-repeat: @repeat;
+}
+
+// Mixin for image container {
+.contain-img(@x-size;@y-size;@block-display:block;) {
+	width:@x-size;
+	height:@y-size;
+	display:@block-display;
+	overflow:hidden;
+	text-align:center;
+	img {
+		max-width:100%;
+		height:auto;
+	}
+}
+
+// Image call mixins
+#brand {
+	.logo () {
+		// e.g. background-image: url("@{image-url}image.png");
+	}
+}

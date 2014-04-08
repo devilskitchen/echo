@@ -1,0 +1,29 @@
+/*==== COLOURS (or colors) ====*/
+
+// Support for HSL is good (HSLA, not so much)
+
+// Colour 1
+@color1-h:264;
+@color1-s:percentage(0.78);
+@color1-l:percentage(0.25);
+
+// Colour 2: we start with the same base saturation and lightness
+@color2-h:spin(@color1-h,180);
+@color2-s:@color1-s;
+@color2-l:@color1-l;
+
+// Hex value:
+@color1:hsl(@color1-h,@color1-s,@color1-l);
+// Hex value:
+@color2:hsl(@color2-h,@color2-s,@color2-l);
+
+// Alternatively, write a function similar to this: http://codepen.io/devilskitchen/pen/srnLG (but more efficient)
+
+// Define greys
+@grey:#999999;
+@light-grey:#CCCCCC;
+@lighter-grey:#DDDDDD;
+@lightest-grey:#EEEEEE;
+@dark-grey:#666666;
+@darker-grey:#444444;
+@darkest-grey:#222222;
