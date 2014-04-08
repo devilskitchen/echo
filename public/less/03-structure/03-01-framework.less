@@ -1,1 +1,79 @@
 /*==== MAIN FRAMEWORK OUTLINE ====*/
+
+@col-sub-width:240px;
+@col-sub-control-width:30px;
+@col-sub-width-tablet:@col-sub-width;
+@col-sub-width-xl:@col-sub-width;
+
+html {
+	background:@lightest-grey;
+}
+
+body {
+	height:100%;
+}
+
+#app-container {
+	height:100%;
+	.clearfix;
+	// flexbox will be built here
+	.col {
+		height:100%;
+		float:left;
+		transition:0.3s linear;
+		min-height:1px;
+	}
+	.col-main {
+		width:100%;
+		.inner {
+			margin:0;
+			@media @mobile {
+				margin-right:@col-sub-control-width;
+				margin-left:@col-sub-control-width;
+			}
+			@media @tablet {
+				margin-right:@col-sub-width;
+				margin-left:@col-sub-control-width;
+			}
+			@media @desktop {
+				margin-left:@col-sub-width;
+				margin-right:@col-sub-width;
+			}			
+		}
+	}
+	.col-sub {
+		
+	}
+	.col-left {
+		background:@color1;
+		margin:0;
+		box-shadow:5px 0 16px rgba(0,0,0,0.4);
+		@media @mobile {
+			width:@col-sub-control-width;
+			margin-right:(-@col-sub-control-width);
+			overflow:hidden;
+		}
+		@media @desktop {
+			margin-right:(-@col-sub-width);
+			width:@col-sub-width;
+		}
+	}
+	.col-right {
+		background:white;
+		margin:0;
+		box-shadow:-5px 0 16px rgba(0,0,0,0.4);
+		@media @mobile {
+			width:@col-sub-control-width;
+			margin-left:(-@col-sub-control-width);
+			overflow:hidden;
+		}
+		@media @tablet {
+			margin-left:(-@col-sub-width);
+			width:@col-sub-width;
+		}
+		@media @desktop {
+			margin-left:(-@col-sub-width);
+			width:@col-sub-width;
+		}
+	}	
+}

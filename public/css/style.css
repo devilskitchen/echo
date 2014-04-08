@@ -14,7 +14,6 @@ html {
 body {
   padding: 0;
   margin: 0;
-  min-height: 100%;
   position: relative;
 }
 /*======== IMPORT CSS LIBRARIES ========*/
@@ -477,13 +476,13 @@ body:before {
   bottom: 0.8em;
   z-index: 9999;
 }
-@media only screen and (max-width: 48em) {
+@media only screen and (min-width: 1em) {
   body:before {
     background: orange;
     content: "mobile";
   }
 }
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 30em) {
   body:before {
     background: green;
     content: "tablet";
@@ -657,9 +656,16 @@ h6 {
   margin: 0.4em 0;
   padding: 0;
 }
+ol,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
 /* !Blockquote ----*/
 blockquote {
-  border-left: 8px solid #9ee633;
+  border-left: 8px solid #7ea080;
   margin: 1.2em 0.8em;
   padding: 0 0.8em;
   position: relative;
@@ -671,7 +677,111 @@ blockquote {
   }
 }
 /*==== 03-Structure ====*/
+/*==== MAIN FRAMEWORK OUTLINE ====*/
+html {
+  background: #eeeeee;
+}
+body {
+  height: 100%;
+}
+#app-container {
+  height: 100%;
+  *zoom: 1;
+}
+#app-container:before,
+#app-container:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+#app-container:after {
+  clear: both;
+}
+#app-container .col {
+  height: 100%;
+  float: left;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+  min-height: 1px;
+}
+#app-container .col-main {
+  width: 100%;
+}
+#app-container .col-main .inner {
+  margin: 0;
+}
+@media only screen and (min-width: 1em) {
+  #app-container .col-main .inner {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+}
+@media only screen and (min-width: 30em) {
+  #app-container .col-main .inner {
+    margin-right: 240px;
+    margin-left: 30px;
+  }
+}
+@media only screen and (min-width: 64em) {
+  #app-container .col-main .inner {
+    margin-left: 240px;
+    margin-right: 240px;
+  }
+}
+#app-container .col-left {
+  background: #4c384b;
+  margin: 0;
+  -webkit-box-shadow: 5px 0 16px rgba(0, 0, 0, 0.4);
+  box-shadow: 5px 0 16px rgba(0, 0, 0, 0.4);
+}
+@media only screen and (min-width: 1em) {
+  #app-container .col-left {
+    width: 30px;
+    margin-right: -30px;
+    overflow: hidden;
+  }
+}
+@media only screen and (min-width: 64em) {
+  #app-container .col-left {
+    margin-right: -240px;
+    width: 240px;
+  }
+}
+#app-container .col-right {
+  background: white;
+  margin: 0;
+  -webkit-box-shadow: -5px 0 16px rgba(0, 0, 0, 0.4);
+  box-shadow: -5px 0 16px rgba(0, 0, 0, 0.4);
+}
+@media only screen and (min-width: 1em) {
+  #app-container .col-right {
+    width: 30px;
+    margin-left: -30px;
+    overflow: hidden;
+  }
+}
+@media only screen and (min-width: 30em) {
+  #app-container .col-right {
+    margin-left: -240px;
+    width: 240px;
+  }
+}
+@media only screen and (min-width: 64em) {
+  #app-container .col-right {
+    margin-left: -240px;
+    width: 240px;
+  }
+}
 /*==== 04-Components ====*/
+/*==== USER PROFILE ====*/
+/*==== STANDARD STYLES FOR WIDGET SURROUNDS ====*/
+.widget-layout .widget {
+  border: 1px solid #cccccc;
+  background: white;
+  width: 40%;
+  padding: 0.4em 0.8em;
+}
 /*==== 101-Libraries ====*/
 /*==== 11-media-queries ====*/
 /* ==========================================================================

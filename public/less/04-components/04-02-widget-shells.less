@@ -1,0 +1,16 @@
+/*==== STANDARD STYLES FOR WIDGET SURROUNDS ====*/
+
+.widget-shell () {
+	border:1px solid @light-grey;
+	background:white;
+	width:40%;
+	.pad();
+}
+
+// ul (usually, but doesn't have to be)
+.widget-layout {
+	// li (usually, but doesn't have to be)
+	.widget {
+		.widget-shell();
+	}
+}
