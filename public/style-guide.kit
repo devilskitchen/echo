@@ -6,7 +6,9 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <!-- DO NOT CHANGE THIS IMPORT: DO CHANGE YOUR PROJECT DETAILS IN config.kit -->
+		<!-- @import "style-guide/config" -->
+        <title><!--$projectName--> Style Guide</title>
         <meta name="description" content="">
         <!-- Set the meta for iOS Home Screen settings -->
         <meta name="apple-mobile-web-app-capable" content="yes">
@@ -21,7 +23,7 @@
         <!-- The Style Guide styles -->
         <link href="style-guide/css/sg-styles.css" rel="stylesheet">
 		<!-- Set the framework styles -->
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="<!--$projectCSSPath-->">
         <!-- Import modernizr here to set the browser capabilities -->
         <script src="/js/lib/modernizr-dev.min.js"></script>
         <!--[if lt IE 9]>
@@ -34,8 +36,7 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 		
-		<!-- DO NOT CHANGE: DO CHANGE YOUR PROJECT DETAILS IN config.kit -->
-		<!-- @import "style-guide/config" -->
+		<!-- DO NOT CHANGE THIS IMPORT -->
 		<!-- @import "style-guide/partials/topnav" -->
 		
 		<!-- METHOD ==
@@ -47,6 +48,7 @@
 		
 			<h1 class="sg-element"><!--$projectName--> Style Guide</h1>
 			<p class="sg-element"><!--$projectDescription--></p>
+			<p class="sg-element"><!--$sgHowTo--></p>
 			
 			<!-- Credits (show/hide toggle) -->
 			<div class="credits sg-element">
