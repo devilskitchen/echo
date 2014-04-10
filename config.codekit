@@ -22,6 +22,15 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/public\/css\/colour-config.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/public\/css\/colour-config.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/public\/css\/style.css": {
 		"fileType": 16,
 		"ignore": 1,
@@ -463,15 +472,6 @@
 		"strictImports": 0,
 		"strictMath": 1,
 		"strictUnits": 1
-		},
-	"\/public\/less\/css\/04-02-widget-shells.css": {
-		"fileType": 16,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/public\/less\/css\/04-02-widget-shells.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
 		},
 	"\/public\/less\/style.less": {
 		"allowInsecureImports": 0,
@@ -1222,6 +1222,26 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/public\/style-guide\/colour-config.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 1,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/public\/style-guide\/colour-config.less",
+		"outputAbbreviatedPath": "\/public\/css\/colour-config.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 1,
+		"strictImports": 0,
+		"strictMath": 1,
+		"strictUnits": 1
+		},
 	"\/public\/style-guide\/config.kit": {
 		"fileType": 2048,
 		"ignore": 1,
@@ -1270,6 +1290,78 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
+		},
+	"\/public\/style-guide\/kit-snippets\/colours.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/public\/style-guide\/kit-snippets\/colours.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/public\/style-guide\/kit-snippets\/colours.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/public\/style-guide\/kit-snippets\/colours.kit",
+		"outputAbbreviatedPath": "\/public\/style-guide\/kit-snippets\/colours.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/public\/style-guide\/kit-snippets\/credits.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/public\/style-guide\/kit-snippets\/credits.kit",
+		"outputAbbreviatedPath": "\/public\/style-guide\/kit-snippets\/credits.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/public\/style-guide\/kit-snippets\/headings.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/public\/style-guide\/kit-snippets\/headings.kit",
+		"outputAbbreviatedPath": "\/public\/style-guide\/kit-snippets\/headings.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/public\/style-guide\/kit-snippets\/lists.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/public\/style-guide\/kit-snippets\/lists.kit",
+		"outputAbbreviatedPath": "\/public\/style-guide\/kit-snippets\/lists.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/public\/style-guide\/kit-snippets\/text-blocks.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/public\/style-guide\/kit-snippets\/text-blocks.kit",
+		"outputAbbreviatedPath": "\/public\/style-guide\/kit-snippets\/text-blocks.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/public\/style-guide\/kit-snippets\/text-inline.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/public\/style-guide\/kit-snippets\/text-inline.kit",
+		"outputAbbreviatedPath": "\/public\/style-guide\/kit-snippets\/text-inline.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/public\/style-guide\/kit-snippets\/topnav.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/public\/style-guide\/kit-snippets\/topnav.kit",
+		"outputAbbreviatedPath": "\/public\/style-guide\/kit-snippets\/topnav.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/public\/style-guide\/less\/sg-styles.less": {
 		"allowInsecureImports": 0,
@@ -1364,23 +1456,27 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 0
 		},
-	"\/public\/style-guide\/partials\/topnav.html": {
-		"fileType": 8192,
+	"\/public\/style-guide\/src\/min\/sg-ck.js": {
+		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/public\/style-guide\/partials\/topnav.html",
-		"outputAbbreviatedPath": "No Output Path",
+		"inputAbbreviatedPath": "\/public\/style-guide\/src\/min\/sg-ck.js",
+		"outputAbbreviatedPath": "\/public\/style-guide\/src\/min\/min\/sg-ck-ck.js",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
 		},
-	"\/public\/style-guide\/partials\/topnav.kit": {
-		"fileType": 2048,
-		"ignore": 1,
+	"\/public\/style-guide\/src\/sg.js": {
+		"fileType": 64,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/public\/style-guide\/partials\/topnav.kit",
-		"outputAbbreviatedPath": "\/public\/style-guide\/partials\/topnav.html",
+		"inputAbbreviatedPath": "\/public\/style-guide\/src\/sg.js",
+		"outputAbbreviatedPath": "\/public\/style-guide\/src\/min\/sg-ck.js",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 0
 		},
 	"\/public\/style-guide\/src\/X-rayHTML.js": {
 		"fileType": 64,

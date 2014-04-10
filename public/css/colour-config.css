@@ -1,0 +1,10 @@
+/*==== COLOURS (or colors) ====*/
+.color-swatch {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border: 4px solid white;
+  -webkit-box-shadow: 0 0 4px rbga(0, 0, 0, 0.5);
+  box-shadow: 0 0 4px rbga(0, 0, 0, 0.5);
+}
+/*# sourceMappingURL=colour-config.css.map */
